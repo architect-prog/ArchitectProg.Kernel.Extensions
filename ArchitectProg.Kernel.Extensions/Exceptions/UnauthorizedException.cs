@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace QuickChecks.Kernel.Exceptions;
+namespace ArchitectProg.Kernel.Extensions.Exceptions;
 
 [Serializable]
 public class UnauthorizedException : Exception

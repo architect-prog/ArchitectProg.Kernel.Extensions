@@ -1,4 +1,4 @@
-﻿namespace DotNet.Kernel.Extentions.Constants;
+﻿namespace ArchitectProg.Kernel.Extensions.Constants;
 
 public static class ExceptionConstants
 {

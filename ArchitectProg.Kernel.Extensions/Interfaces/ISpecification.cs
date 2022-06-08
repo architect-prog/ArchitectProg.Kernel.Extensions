@@ -1,4 +1,4 @@
-﻿namespace QuickChecks.Kernel.Interfaces;
+﻿namespace ArchitectProg.Kernel.Extensions.Interfaces;
 
 public interface ISpecification<T>
 {

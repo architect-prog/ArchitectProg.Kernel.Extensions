@@ -1,7 +1,7 @@
-﻿using DotNet.Kernel.Extentions.Constants;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using ArchitectProg.Kernel.Extensions.Constants;
 
-namespace QuickChecks.Kernel.Exceptions;
+namespace ArchitectProg.Kernel.Extensions.Exceptions;
 
 [Serializable]
 public class ResourceNotFoundException : Exception

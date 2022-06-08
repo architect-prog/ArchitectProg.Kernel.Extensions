@@ -1,6 +1,6 @@
-﻿namespace QuickChecks.Kernel.Interfaces;
+﻿namespace ArchitectProg.Kernel.Extensions.Interfaces;
 
-public interface IEntity<TId>
+public interface IEntity<out TId>
 {
     TId? Id { get; }
 }

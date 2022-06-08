@@ -1,6 +1,6 @@
-﻿using QuickChecks.Kernel.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Interfaces;
 
-namespace DotNet.Kernel.Extentions.Base;
+namespace ArchitectProg.Kernel.Extensions.Base;
 
 public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
 {
@@ -8,10 +8,10 @@ public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
 
     public static bool operator ==(Entity<TId>? first, Entity<TId>? second)
     {
-        if (first == null && second == null)
+        if (first is null && second is null)
             return true;
 
-        if (first == null || second == null)
+        if (first is null || second is null)
             return false;
 
         var result = first.Equals(second);
@@ -32,7 +32,7 @@ public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
         if (ReferenceEquals(this, other))
             return true;
 
-        if (!other.GetType().Equals(GetType()))
+        if (GetType() != other.GetType())
             return false;
 
         var result = Id?.Equals(other.Id) ?? false;

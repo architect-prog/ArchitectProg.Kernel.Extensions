@@ -1,6 +1,6 @@
-﻿using QuickChecks.Kernel.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Interfaces;
 
-namespace QuickChecks.Persistence.Extensions;
+namespace ArchitectProg.Kernel.Extensions.Extensions;
 
 public static class QueryableExtensions
 {

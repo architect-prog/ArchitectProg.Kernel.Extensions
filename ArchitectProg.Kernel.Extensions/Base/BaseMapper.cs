@@ -1,6 +1,6 @@
-﻿using QuickChecks.Kernel.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Interfaces;
 
-namespace DotNet.Kernel.Extentions.Base;
+namespace ArchitectProg.Kernel.Extensions.Base;
 
 public abstract class BaseMapper<TSource, TDestination> : IMapper<TSource, TDestination>
 {
