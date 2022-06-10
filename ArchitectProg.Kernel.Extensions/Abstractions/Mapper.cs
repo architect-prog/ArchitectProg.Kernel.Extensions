@@ -1,8 +1,8 @@
 ﻿using ArchitectProg.Kernel.Extensions.Interfaces;
 
-namespace ArchitectProg.Kernel.Extensions.Base;
+namespace ArchitectProg.Kernel.Extensions.Abstractions;
 
-public abstract class BaseMapper<TSource, TDestination> : IMapper<TSource, TDestination>
+public abstract class Mapper<TSource, TDestination> : IMapper<TSource, TDestination>
 {
     public abstract TDestination Map(TSource source);
 

@@ -1,6 +1,6 @@
 ﻿using ArchitectProg.Kernel.Extensions.Interfaces;
 
-namespace ArchitectProg.Kernel.Extensions.Base;
+namespace ArchitectProg.Kernel.Extensions.Abstractions;
 
 public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
 {
