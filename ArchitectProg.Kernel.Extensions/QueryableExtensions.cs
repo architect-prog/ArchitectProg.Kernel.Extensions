@@ -1,6 +1,6 @@
 ﻿using ArchitectProg.Kernel.Extensions.Interfaces;
 
-namespace ArchitectProg.Kernel.Extensions.Extensions;
+namespace ArchitectProg.Kernel.Extensions;
 
 public static class QueryableExtensions
 {

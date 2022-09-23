@@ -9,7 +9,7 @@ public interface IRepository<T> where T : class
     Task Delete(T entity);
     Task<int> Count(ISpecification<T> specification);
     Task<bool> Exists(ISpecification<T> specification);
-    ValueTask<T> GetById(object id);
-    Task<T> Get(ISpecification<T> specification);
+    Task<T?> GetOrDefault(object id);
+    Task<T?> GetOrDefault(ISpecification<T> specification);
     Task<T[]> List(ISpecification<T> specification, int? skip = null, int? take = null);
 }
