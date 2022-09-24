@@ -1,14 +1,14 @@
 ﻿namespace ArchitectProg.Kernel.Extensions.Common;
 
-public class Result<T>
+public class Result<TValue>
 {
-    private readonly T? value;
+    private readonly TValue? value;
     private readonly Exception? exception;
 
-    public T? ValueOrDefault => value;
+    public TValue? ValueOrDefault => value;
     public bool IsSuccess => exception is null;
 
-    public Result(T value)
+    public Result(TValue value)
     {
         this.value = value;
     }
@@ -19,15 +19,37 @@ public class Result<T>
         this.exception = exception;
     }
 
-    public R Match<R>(Func<T?, R> success, Func<Exception?, R> fail)
+    public TResult Match<TResult>(Func<TValue?, TResult> success, Func<Exception?, TResult> fail)
     {
         var result = IsSuccess ? success(value) : fail(exception);
         return result;
     }
 
-    public static implicit operator Result<T>(T source)
+    public static implicit operator Result<TValue>(TValue source)
     {
-        var result = new Result<T>(source);
+        var result = new Result<TValue>(source);
+        return result;
+    }
+}
+
+public class Result
+{
+    private readonly Exception? exception;
+
+    public bool IsSuccess => exception is null;
+
+    public Result()
+    {
+    }
+
+    public Result(Exception exception)
+    {
+        this.exception = exception;
+    }
+
+    public R Match<R>(Func<R> success, Func<Exception?, R> fail)
+    {
+        var result = IsSuccess ? success() : fail(exception);
         return result;
     }
 }
