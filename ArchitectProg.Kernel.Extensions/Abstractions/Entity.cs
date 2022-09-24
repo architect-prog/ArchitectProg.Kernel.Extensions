@@ -2,9 +2,10 @@
 
 namespace ArchitectProg.Kernel.Extensions.Abstractions;
 
-public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
+public abstract class Entity<TId> : IEntity<TId>
+    where TId : struct
 {
-    public virtual TId? Id { get; set; }
+    public virtual TId Id { get; set; }
 
     public static bool operator ==(Entity<TId>? first, Entity<TId>? second)
     {
@@ -24,7 +25,7 @@ public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
         return result;
     }
 
-    public bool Equals(Entity<TId>? other)
+    public bool Equals(IEntity<TId>? other)
     {
         if (other == null)
             return false;
@@ -35,7 +36,7 @@ public abstract class Entity<TId> : IEntity<TId>, IEquatable<Entity<TId>>
         if (GetType() != other.GetType())
             return false;
 
-        var result = Id?.Equals(other.Id) ?? false;
+        var result = Id.Equals(other.Id);
         return result;
     }
 
