@@ -34,6 +34,12 @@ public static class ResultFactory
         return result;
     }
 
+    public static Result Success()
+    {
+        var result = new Result();
+        return result;
+    }
+
     public static Result Failure(Exception exception)
     {
         var result = new Result(exception);
