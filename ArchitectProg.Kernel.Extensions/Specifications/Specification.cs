@@ -1,6 +1,6 @@
-﻿using ArchitectProg.Kernel.Extensions.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Specifications.Interfaces;
 
-namespace ArchitectProg.Kernel.Extensions.Abstractions;
+namespace ArchitectProg.Kernel.Extensions.Specifications;
 
 public abstract class Specification<T> : ISpecification<T>
 {

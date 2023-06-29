@@ -1,4 +1,4 @@
-﻿namespace ArchitectProg.Kernel.Extensions.Interfaces;
+﻿namespace ArchitectProg.Kernel.Extensions.Entities.Interfaces;
 
 public interface IEntity<TId> : IEquatable<IEntity<TId>> where TId : struct
 {

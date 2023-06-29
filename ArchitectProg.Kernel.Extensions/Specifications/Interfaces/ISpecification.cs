@@ -1,4 +1,4 @@
-﻿namespace ArchitectProg.Kernel.Extensions.Interfaces;
+﻿namespace ArchitectProg.Kernel.Extensions.Specifications.Interfaces;
 
 public interface ISpecification<T>
 {

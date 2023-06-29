@@ -1,4 +1,6 @@
-﻿namespace ArchitectProg.Kernel.Extensions.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Specifications.Interfaces;
+
+namespace ArchitectProg.Kernel.Extensions.Interfaces;
 
 public interface IRepository<T> where T : class
 {

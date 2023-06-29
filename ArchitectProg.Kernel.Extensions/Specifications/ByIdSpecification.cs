@@ -1,4 +1,4 @@
-﻿using ArchitectProg.Kernel.Extensions.Abstractions;
+﻿using ArchitectProg.Kernel.Extensions.Entities;
 
 namespace ArchitectProg.Kernel.Extensions.Specifications;
 

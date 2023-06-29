@@ -1,11 +1,11 @@
-﻿using ArchitectProg.Kernel.Extensions.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Entities.Interfaces;
 
-namespace ArchitectProg.Kernel.Extensions.Abstractions;
+namespace ArchitectProg.Kernel.Extensions.Entities;
 
 public abstract class Entity<TId> : IEntity<TId>
     where TId : struct
 {
-    public virtual TId Id { get; set; }
+    public virtual TId Id { get; init; }
 
     public static bool operator ==(Entity<TId>? first, Entity<TId>? second)
     {

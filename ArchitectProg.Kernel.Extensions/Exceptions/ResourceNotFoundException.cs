@@ -1,5 +1,4 @@
 ﻿using System.Runtime.Serialization;
-using ArchitectProg.Kernel.Extensions.Constants;
 
 namespace ArchitectProg.Kernel.Extensions.Exceptions;
 
@@ -7,7 +6,7 @@ namespace ArchitectProg.Kernel.Extensions.Exceptions;
 public class ResourceNotFoundException : Exception
 {
     public ResourceNotFoundException(string resourceName)
-        : base(string.Format(ExceptionConstants.ResourceNotFound, resourceName))
+        : base($"Resource: '{resourceName}' not found")
     {
     }
 

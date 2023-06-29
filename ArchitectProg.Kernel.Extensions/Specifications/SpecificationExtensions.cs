@@ -1,4 +1,4 @@
-﻿using ArchitectProg.Kernel.Extensions.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Specifications.Interfaces;
 
 namespace ArchitectProg.Kernel.Extensions.Specifications
 {
@@ -11,9 +11,9 @@ namespace ArchitectProg.Kernel.Extensions.Specifications
 
         public static IQueryable<T> ApplySpecification<T>(this IQueryable<T> entities, ISpecification<T> specification)
         {
-            var result = specification.AddPredicates(entities);
+            var result = specification.AddEagerFetching(entities);
+            result = specification.AddPredicates(result);
             result = specification.AddSorting(result);
-            result = specification.AddEagerFetching(result);
 
             return result;
         }

@@ -1,6 +1,6 @@
-﻿using ArchitectProg.Kernel.Extensions.Interfaces;
+﻿using ArchitectProg.Kernel.Extensions.Mappers.Interfaces;
 
-namespace ArchitectProg.Kernel.Extensions.Abstractions;
+namespace ArchitectProg.Kernel.Extensions.Mappers;
 
 public abstract class Mapper<TSource, TDestination> : IMapper<TSource, TDestination>
 {

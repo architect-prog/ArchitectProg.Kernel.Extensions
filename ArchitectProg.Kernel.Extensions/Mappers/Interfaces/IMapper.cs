@@ -1,4 +1,4 @@
-﻿namespace ArchitectProg.Kernel.Extensions.Interfaces;
+﻿namespace ArchitectProg.Kernel.Extensions.Mappers.Interfaces;
 
 public interface IMapper<in TSource, out TDestination>
 {

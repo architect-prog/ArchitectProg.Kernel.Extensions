@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchitectProg.Kernel.Extensions", "ArchitectProg.Kernel.Extensions\ArchitectProg.Kernel.Extensions.csproj", "{179DF90F-D150-4DF5-833D-6FB63677FE6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchitectProg.Kernel.Extensions.Tests", "ArchitectProg.Kernel.Extensions.Tests\ArchitectProg.Kernel.Extensions.Tests.csproj", "{82E72D42-B94E-4ACB-8E4F-22FF8371AAAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{179DF90F-D150-4DF5-833D-6FB63677FE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{179DF90F-D150-4DF5-833D-6FB63677FE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{179DF90F-D150-4DF5-833D-6FB63677FE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E72D42-B94E-4ACB-8E4F-22FF8371AAAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E72D42-B94E-4ACB-8E4F-22FF8371AAAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E72D42-B94E-4ACB-8E4F-22FF8371AAAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E72D42-B94E-4ACB-8E4F-22FF8371AAAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

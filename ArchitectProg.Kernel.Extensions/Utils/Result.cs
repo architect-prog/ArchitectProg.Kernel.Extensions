@@ -1,4 +1,4 @@
-﻿namespace ArchitectProg.Kernel.Extensions.Common;
+﻿namespace ArchitectProg.Kernel.Extensions.Utils;
 
 public class Result<TValue>
 {
