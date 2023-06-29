@@ -4,6 +4,7 @@ Simple interfaces which allows easier build architecture for your solution.
 
 Solution provides:
 - Interfaces for implementation repository pattern
+- Interfaces for implementation caching
 - Interfaces for implementation unit of work pattern
 - Implementation of specification pattern
 - Abstraction for entities and mapping
