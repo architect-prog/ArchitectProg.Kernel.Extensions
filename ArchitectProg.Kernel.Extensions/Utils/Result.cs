@@ -6,6 +6,7 @@ public class Result<TValue>
     private readonly Exception? exception;
 
     public TValue? ValueOrDefault => value;
+    public Exception? Exception => exception;
     public bool IsSuccess => exception is null;
 
     public Result(TValue value)
@@ -36,6 +37,7 @@ public class Result
 {
     private readonly Exception? exception;
 
+    public Exception? Exception => exception;
     public bool IsSuccess => exception is null;
 
     public Result()
