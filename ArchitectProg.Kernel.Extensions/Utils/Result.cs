@@ -20,9 +20,9 @@ public class Result<TValue>
         this.exception = exception;
     }
 
-    public TResult Match<TResult>(Func<TValue?, TResult> success, Func<Exception?, TResult> fail)
+    public TResult Match<TResult>(Func<TValue, TResult> success, Func<Exception, TResult> fail)
     {
-        var result = IsSuccess ? success(value) : fail(exception);
+        var result = IsSuccess ? success(value!) : fail(exception!);
         return result;
     }
 
