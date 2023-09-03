@@ -9,6 +9,10 @@ public class ValidationException : Exception
     {
     }
 
+    public ValidationException(IEnumerable<string> messages) : base(string.Join(". ", messages))
+    {
+    }
+
     protected ValidationException(
         SerializationInfo info,
         StreamingContext context) : base(info, context)
