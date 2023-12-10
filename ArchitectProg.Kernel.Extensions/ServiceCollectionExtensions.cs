@@ -8,10 +8,8 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddKernelExtensions(this IServiceCollection serviceCollection)
     {
-        if (serviceCollection is null)
-            throw new ArgumentNullException(nameof(serviceCollection));
+        ArgumentNullException.ThrowIfNull(serviceCollection);
 
-        serviceCollection.AddScoped<IResultFactory, ResultFactory>();
         serviceCollection.AddScoped<ISpecificationFactory, SpecificationFactory>();
 
         return serviceCollection;

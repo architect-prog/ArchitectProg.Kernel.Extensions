@@ -1,6 +1,4 @@
-﻿using System.Runtime.Serialization;
-
-namespace ArchitectProg.Kernel.Extensions.Exceptions;
+﻿namespace ArchitectProg.Kernel.Extensions.Exceptions;
 
 [Serializable]
 public class ValidationException : Exception
@@ -10,12 +8,6 @@ public class ValidationException : Exception
     }
 
     public ValidationException(IEnumerable<string> messages) : base(string.Join(". ", messages))
-    {
-    }
-
-    protected ValidationException(
-        SerializationInfo info,
-        StreamingContext context) : base(info, context)
     {
     }
 }

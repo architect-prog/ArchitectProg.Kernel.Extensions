@@ -6,10 +6,7 @@ public interface IMapper<in TSource, out TDestination>
 
     IEnumerable<TDestination> MapCollection(IEnumerable<TSource> source)
     {
-        if (source == null)
-        {
-            throw new ArgumentNullException(nameof(source));
-        }
+        ArgumentNullException.ThrowIfNull(source);
 
         var result = source.Select(x => Map(x)).ToArray();
         return result;

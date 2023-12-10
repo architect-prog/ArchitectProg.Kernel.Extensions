@@ -4,5 +4,5 @@ public interface ICacheService
 {
     Task<T?> GetValueOrDefault<T>(string key);
     Task SetValue<T>(string key, T value, TimeSpan? expirationTime = null);
-    Task DeleteKey(string key);
+    Task Delete(string key);
 }
